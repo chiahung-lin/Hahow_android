@@ -20,10 +20,11 @@
     <EditText
         android:id="@+id/ntd"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="48dp"
         android:layout_marginStart="8dp"
         android:ems="10"
-        android:inputType="textPersonName"
+        android:inputType="number"
+        app:layout_constraintBottom_toBottomOf="@+id/testView"
         app:layout_constraintStart_toEndOf="@+id/testView"
         app:layout_constraintTop_toTopOf="@+id/testView" />
 
@@ -33,6 +34,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
+        android:onClick="trans"
         android:text="Go"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
         app:layout_constraintStart_toStartOf="@+id/testView"
