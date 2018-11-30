@@ -17,21 +17,21 @@ public class MainActivity extends AppCompatActivity {
     public void trans(View view){
         EditText edNTD = findViewById(R.id.ntd);
         String moneyData = edNTD.getText().toString();
+        String title;
+        String message;
         if (moneyData.equals("")){
-            new AlertDialog.Builder(this)
-                    .setTitle("Problem")
-                    .setMessage("Please enter you NTD amount")
-                    .setPositiveButton("OK",null)
-                    .show();
+            title = "Problem";
+            message ="Please enter you NTD amount";
         }
         else{
             float money = Float.parseFloat(moneyData) / 30.9f;
-            new AlertDialog.Builder(this)
-                    .setTitle("Result")
-                    .setMessage("USD is "+money)
-                    .setPositiveButton("OK",null)
-                    .show();
+            title="Result";
+            message="USD is "+money;
         }
-
+        new AlertDialog.Builder(this)
+                .setTitle(title)
+                .setMessage(message)
+                .setPositiveButton("OK",null)
+                .show();
     }
 }
