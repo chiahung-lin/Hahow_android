@@ -24,18 +24,18 @@ public class MainActivity extends AppCompatActivity {
                 String title;
                 String message;
                 if (moneyData.equals("")){
-                    title = "Problem";
-                    message ="Please enter you NTD amount";
+                    title = getString(R.string.problem);
+                    message =getString(R.string.please_enter_ntd);
                 }
                 else{
                     float money = Float.parseFloat(moneyData) / 30.9f;
-                    title="Result";
-                    message="USD is "+money;
+                    title=getString(R.string.result);
+                    message=getString(R.string.usd_is)+money;
                 }
                 new AlertDialog.Builder(MainActivity.this)
                         .setTitle(title)
                         .setMessage(message)
-                        .setPositiveButton("OK",null)
+                        .setPositiveButton(R.string.ok,null)
                         .show();
             }
         });
